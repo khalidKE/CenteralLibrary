@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة المتداولة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin: 20px 0;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .question:last-child {
+            border-bottom: none;
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #0056b3;
+            cursor: pointer;
+        }
+
+        .answer {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 4px solid #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>الأسئلة المتداولة</h1>
+        <div class="question">
+            <div class="question-title" onclick="toggleAnswer(this)">ما هو العمر المناسب للمتقدم للوظيفة؟</div>
+            <div class="answer">تتطلب معظم الوظائف أن يكون المتقدم بالغاً من العمر 18 عاماً وما فوق.</div>
+        </div>
+        <div class="question">
+            <div class="question-title" onclick="toggleAnswer(this)">هل يحق لي طلب دعم من متخصصين في مجال عملي؟</div>
+            <div class="answer">نعم، يمكنك طلب الدعم من متخصصين في مجالك.</div>
+        </div>
+        <div class="question">
+            <div class="question-title" onclick="toggleAnswer(this)">كيف أستطيع الوصول إلى طرق جديدة في التعلم؟</div>
+            <div class="answer">يمكنك استخدام الإنترنت للبحث عن دورات تعليمية وموارد جديدة.</div>
+        </div>
+        <div class="question">
+            <div class="question-title" onclick="toggleAnswer(this)">هل كُنت سابقاً في عمل آخر؟</div>
+            <div class="answer">نعم، لدي خبرة في مجال آخر.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
