@@ -6,6 +6,15 @@
         color: white;
         position: relative;
       }
+      .mainNav {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .navbar-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
       .img_text {
         padding: 0%;
         width: 100%;
