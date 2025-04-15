@@ -1,52 +1,37 @@
 window.onscroll = function () {
   scrollFunction();
 };
-
-function changeColorOfLinks(color) {
-  const navlinks = document.getElementsByClassName("navbar-links");
-
-  for (let i = 0; i < navlinks.length; i++) {
-    navlinks[i].style.color = color;
-  }
-}
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar-content ").style.background = "#f6eac7";
-    changeColorOfLinks("#7c5245");
-    document.getElementById("login-btn").style.background = "none";
-    document.getElementById("login-btn").style.color = "black";
-    document
-      .getElementById("login-btn")
-      .addEventListener(
-        "mouseover",
-        () =>
-          (document.getElementById("login-btn").style.background = "#f6eac7")
-      );
-    document
-      .getElementById("login-btn")
-      .addEventListener(
-        "mouseout",
-        () => (document.getElementById("login-btn").style.background = "white")
-      );
-  } else {
-    document.getElementById("navbar-content ").style.background = "transparent";
-    changeColorOfLinks("white");
-    document.getElementById("login-btn").style.background = "white";
-  }
-}
-
-// Typing text
 const text = "Welcome to Central Library at University of Sadat City";
 const typingElement = document.getElementById("typing-text");
 let index = 0;
-
 function typeText() {
-    
   typingElement.textContent += text.charAt(index);
   index++;
         setTimeout(typeText, 70);
   
         }
-        
-
 typeText();
+const audio = new Audio("thanks.wav"); 
+const submitBtn = document.querySelector('input[type="submit"]');
+submitBtn.addEventListener("click", () => {
+    audio.currentTime = 0; 
+    audio.play();
+});
+
+ function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+        const allAnswers = document.querySelectorAll('.answer');
+        const allTitles = document.querySelectorAll('.question-title');
+        allAnswers.forEach(item => {
+          if (item !== answer) {
+            item.classList.remove('show');
+          }
+        });
+        allTitles.forEach(item => {
+          if (item !== element) {
+            item.classList.remove('active');
+          }
+        });
+        answer.classList.toggle('show');
+        element.classList.toggle('active');
+      }

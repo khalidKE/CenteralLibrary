@@ -124,34 +124,6 @@
         background-color: #1569f7;
       }
 
-      .navSelect {
-        padding-inline: 40px;
-        height: 70px;
-        width: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .navSelect:hover {
-        background-color: #0b45aa;
-      }
-
-      .navSelect2 {
-        transition-delay: 100ms;
-      }
-
-      .navSelect3 {
-        transition-delay: 200ms;
-      }
-
-      .navSelect4 {
-        transition-delay: 300ms;
-      }
-
-      .navSelect5 {
-        transition-delay: 400ms;
-      }
 
       .searchResaults {
         margin-left: 5%;
@@ -253,6 +225,5 @@
         text-align: center;
         width: 90%;
       }
-      footer {
-        margin-top: 200px;
-      }
+     
+      
