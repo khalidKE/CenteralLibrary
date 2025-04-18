@@ -4,7 +4,7 @@
  
  ## 🌐 Live Preview
  
- > You can host the project using [Live Demo](https://khalidke.github.io/Library/) 
+ > You can host the project using [Live Demo](https://khalidke.github.io/CenteralLibrary/) 
  
  ---
  
